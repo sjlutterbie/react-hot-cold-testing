@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { expect } from 'chai';
 
 import Feedback from '../feedback';
 
@@ -12,7 +11,7 @@ describe('<Feedback/ >', () => {
   
   it('Should render an h2 element', () => {
     const wrapper = shallow(<Feedback />);
-    expect(wrapper.is('h2')).to.equal(true);
+    expect(wrapper.is('h2')).toEqual(true);
   });
   
   // It should render an h2 element, with the expected contents
@@ -24,7 +23,7 @@ describe('<Feedback/ >', () => {
       const wrapper = mount(
         <Feedback feedback={feedback} guessCount={key} />);
       wrapper.update();
-      expect(wrapper.text()).to.equal('foo ');
+      expect(wrapper.text()).toEqual('foo ');
     });
   });
 
@@ -35,8 +34,8 @@ describe('<Feedback/ >', () => {
       const key = 1;
       const wrapper = mount(
         <Feedback feedback={feedback} guessCount={key} />);
-      expect(wrapper.text()).to.equal('foo Guess again!');
-      expect(wrapper.find('span').text()).to.equal('Guess again!');
+      expect(wrapper.text()).toEqual('foo Guess again!');
+      expect(wrapper.find('span').text()).toEqual('Guess again!');
     });
   });
   

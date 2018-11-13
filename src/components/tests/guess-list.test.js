@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { expect } from 'chai';
 
 import GuessList from '../guess-list';
 
@@ -15,12 +14,12 @@ describe('<GuessList />', () => {
   it('Should render an ul element', () => {
     const guesses = ['a','b','c'];
     const wrapper = shallow(<GuessList guesses={guesses} />);
-    expect(wrapper.is('ul')).to.equal(true);
+    expect(wrapper.is('ul')).toEqual(true);
   });
   
   it('Should contain the correct length list', () => {
     const guesses = ['a','b','c'];
     const wrapper = shallow(<GuessList guesses={guesses} />);
-    expect(wrapper.find('ul').children()).to.have.length(guesses.length);
+    expect(wrapper.find('ul').children().length).toEqual(guesses.length);
   });
 });

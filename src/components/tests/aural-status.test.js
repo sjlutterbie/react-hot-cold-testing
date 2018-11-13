@@ -1,7 +1,5 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
-import { expect } from 'chai';
-
 
 import AuralStatus from '../aural-status';
 
@@ -13,7 +11,7 @@ describe('<AuralStatus />', () => {
   
   it('Renders a paragraph with class `visuallyhidden`', () => {
     const wrapper = shallow(<AuralStatus />);
-    expect(wrapper.is('p.visuallyhidden')).to.equal(true);
+    expect(wrapper.is('p.visuallyhidden')).toEqual(true);
   });
   
   it('Should render prop auralStatus as its content', () => {
@@ -22,6 +20,6 @@ describe('<AuralStatus />', () => {
       <AuralStatus auralStatus={value} />);
     wrapper.update();
     const contents = wrapper.text();
-    expect(contents).to.equal(value);
+    expect(contents).toEqual(value);
   });
 });

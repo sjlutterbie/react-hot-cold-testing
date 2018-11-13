@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { expect } from 'chai';
 
 import GuessCount from '../guess-count';
 
@@ -12,7 +11,7 @@ describe('<GuessCount>', () => {
   
   it('Should render an h2 element', () => {
     const wrapper = shallow(<GuessCount />);
-    expect(wrapper.is('h2')).to.equal(true);
+    expect(wrapper.is('h2')).toEqual(true);
   });
   
   describe('When guessCount === 1', () => {
@@ -21,7 +20,7 @@ describe('<GuessCount>', () => {
       const wrapper = mount(
         <GuessCount guessCount={guessCount} />
       );
-      expect(wrapper.text()).to.equal(`You've made 1 guess!`);
+      expect(wrapper.text()).toEqual(`You've made 1 guess!`);
     });
   });
   
@@ -31,7 +30,7 @@ describe('<GuessCount>', () => {
       const wrapper = mount(
         <GuessCount guessCount={guessCount} />
       );
-      expect(wrapper.text()).to.equal(`You've made ${guessCount} guesses!`);
+      expect(wrapper.text()).toEqual(`You've made ${guessCount} guesses!`);
     });
   });
 });
