@@ -2,6 +2,13 @@ language: node_js
 node_js: node
 cache:
   directories:
-    - node_modules
+  - node_modules
 env:
-  - CI=true
+- CI=true
+deploy:
+  provider: heroku
+  api_key:
+    secure: Zqbt5QbcEzTXcOqvcqfERyYqQu1T6++AgCpDVEAgJWzKIf1PEdXJH9e8Jq/mPL/E8VVaUWl0b147QP+vAuC4nAs4BtKWzxiZ8v8z0Ea9w+YZ3wfUqHRQ/pYt7K47mlkpXoDTEvpLuJjpSLeArskUiuylFWsYHsg3/FF2wgLM8Q5yBiL65LyB6QU9ckitn1jqd+h1BF/a7/6+yQyzk4H4ih5XHjktKI6nOPsR3Yedk1Rm33mWmbFI7I27DlLLLzcZINMZZz5oSqJTDV2755/MFO6IhJ2bFleW/KFTGOg4vGa2kvaA1F32VFduubVMfE3Sv6cw2WMIcDk3G9xa+nHCzeunp2axGIz9uXyFwrl7cWsdW6fyThC8mWoNme82vINnuyqeI4Wu17b/xYoNP2WHvh5CWZUHKFTimxrZnhuyuq4wpbwdYh/8KNcFAnvH4hWE5eYSFdcvXj+IHjYiDj1ntYefNrCVG99E76j1x5R1s7ZIQ1tjeB4E3HVFiqoZsq/61gd48BG0a3oajCJZJ4kRgLLJiz+gcO5lHAs7PEQxFGoqPkWLMgLlM09pg0KBB6C3HISgLmEC/enfX1PNrNx6D3CtFOqoyKVbz3ZFFeRA2glhMDNQxRjv5QsIt14uOHes5dCfDyc0vimV4AFIcfX2Y3/71MRl0YZPY9P6lnCQZcw=
+  app: polar-escarpment-79203
+  on:
+    repo: sjlutterbie/react-hot-cold-testing
