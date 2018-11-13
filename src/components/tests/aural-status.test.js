@@ -24,6 +24,4 @@ describe('<AuralStatus />', () => {
     const contents = wrapper.text();
     expect(contents).to.equal(value);
   });
-  
-  
 });
